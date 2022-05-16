@@ -1,7 +1,8 @@
 ;;主题配置
-;;(require 'atom-one-dark)
+;;(require 'atom-one-dark-theme)
 ;;(require 'dracula-theme)
-;;(require 'molokai-theme)
+;; (require 'molokai-theme)
+(load-theme 'molokai t)
 
 ;;设置标题栏显示文件路径
 (defun frame-title-string ()
@@ -18,7 +19,11 @@
               (concat "..."
                       (substring fname (- (length fname) max-len)))))
     fname))
-(setq frame-title-format '("Emacs@"(:eval (frame-title-string))))
+;; (setq frame-title-format '("Emacs@"(:eval (frame-title-string))))
+(setq frame-title-format
+      '((:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name))
+                 "%b"))))
 
 ;;关闭Emacs启动画面
 (setq inhibit-startup-message t)
@@ -47,5 +52,13 @@
 (setq scroll-step 1
       scroll-margin 5
       scroll-conservatively 9999)
+
+;;编码设置
+(set-language-environment 'UTF-8) 
+(set-locale-environment "UTF-8") 
+(set-default-coding-systems 'utf-8)
+
+;;字体设置
+(set-frame-font "Fira Code 12" nil t)
 
 (provide 'init-ui)

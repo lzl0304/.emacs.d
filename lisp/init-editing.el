@@ -18,6 +18,7 @@
 
 ;;Tab为4个空格
 (setq default-tab-width 4)
+(setq tab-width 4)
 (setq indent-tabs-mode nil)
 (setq c-default-style "linux")
 (setq c-basic-offset 4)
@@ -68,11 +69,13 @@
 
 ;;自动补全括号
 (electric-pair-mode t)
-(setq electric-pair-pairs
-    '(
-        (?\" . ?\")
-		(?\{ . ?\})
-		(?\' . ?\')))
+;; (setq electric-pair-pairs
+;;     '(
+;;         (?\" . ?\")
+;; 		(?\{ . ?\})
+;; 		(?\' . ?\')
+;;     )
+;; )
 
 ;;禁止自动生成备份文件
 (setq make-backup-files nil)

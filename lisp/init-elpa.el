@@ -1,9 +1,14 @@
 (require 'package)
 
 ;; 增加软件包仓库
-(setq package-archives '(("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-                         ("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+;; (setq package-archives '(("org" . "http://orgmode.org/elpa/")
+;;                          ("melpa" . "https://melpa.org/packages/")
+;;                          ("gnu" . "https://elpa.gnu.org/packages/")
+;;                          ("melpa-stable" . "https://stable.melpa.org/packages/")))
+(setq package-archives '(("gnu" . "http://mirrors.ustc.edu.cn/elpa/gnu/")
+                         ("melpa" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
+                         ("melpa-stable" . "http://mirrors.ustc.edu.cn/elpa/melpa-stable/")
+                         ("org" . "http://mirrors.ustc.edu.cn/elpa/org/")))
 
 ;; 定义require-package函数
 (defun require-package (package &optional min-version no-refresh)

@@ -45,4 +45,15 @@
 ;;提示快捷键
 (global-set-key "\M-/" 'auto-complete)
 
+(defun ac-linum-workaround ()
+  "linum-mode tries to display the line numbers even for the
+completion menu. This workaround stops that annoying behavior."
+  (interactive)
+  (defadvice linum-update (around ac-linum-update-workaround activate)
+    (unless ac-completing
+      ad-do-it)))
+
+;开启linum时调用
+(ac-linum-workaround)
+
 (provide 'init-auto-complete)
