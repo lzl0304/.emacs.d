@@ -26,7 +26,10 @@
 ;;插件
 (require 'init-elpa)
 (require 'init-neotree)
+(require 'init-toml-mode)
+(require 'init-yaml-mode)
 (require 'init-cmake-mode)
+(require 'init-python-mode)
 (require 'init-auto-complete)
 (require 'init-markdown-mode)
 (require 'init-window-numbering)
