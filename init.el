@@ -30,7 +30,7 @@
 (require 'init-yaml-mode)
 (require 'init-cmake-mode)
 (require 'init-python-mode)
-(require 'init-auto-complete)
+(require 'init-company-mode)
 (require 'init-markdown-mode)
 (require 'init-window-numbering)
 
